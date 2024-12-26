@@ -114,7 +114,21 @@ Select your hardrive, and erase it as APFS And GUID Partition Map. THIS WILL ERA
 
 after erasing your hardrive, select Install macOS Monterey. Select basic things as agreeing the tos, and select your hardrive (or the disk you want to install macOS on)
 
+It should start downloading, after some time it will restart select install macOS again or select your hardrive if you see it.
 
+Once you get to the select your country part select it as you wish it to be like.
+
+You Should get to the desktop after finishing selecting things.
+
+Well Done! You Booted into macOS!
+
+Patching Things Once Loaded Into macOS (Part Three)
+------------------------------------------------------------------------------------------------------------------------------------------
+Now, you are staring into the desktop. try things like testing the wifi or usb drives.
+
+The things im telling about probably won't work. Lets fix them together!
+
+(Wait for an update on the guide)
 
 
 
