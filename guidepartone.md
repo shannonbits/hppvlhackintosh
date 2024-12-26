@@ -43,7 +43,10 @@ Not working things:
   
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-Guide Part:
+Guide Part(s):
+
+Flashing Our MacOS Image onto the USB (Part One)
+------------------------------------------------------------------------------------------------------------------------------------------
 
 Let's Get Started!
 
@@ -56,10 +59,60 @@ Open this link: https://osxinfo.net/konu/macos-monterey-intel-ve-amd-kurulum-ima
 
 ![Ekran Resmi 2024-12-26 19 15 55](https://github.com/user-attachments/assets/a18ab901-fdc3-48a5-a0a4-20a5b06e3c90)
 
-Once you download the image,
+Once you download the image, you need to use an software called Balena Etcher (https://www.balena.io/etcher&ved=2ahUKEwjej9y068WKAxXu8DQHHSZuAPIQFnoECAoQAQ&usg=AOvVaw0UNPm_qcksmQ1aL8D-5gLD)
+
+After you download Etcher, open the software select the .raw file we downloaded (our image of macOS Monterey). Selcet your USB (it should be atleast 32 or 16 GB) and click the big green flash button! what this will do is flash the .raw file we downloaded onto the usb.
+
+After Flashing is finished, go into your bios settings and change some things up, for me i only needed to close secure boot off. But, i will tell you the things that you need to change if you have those settings:
 
 
+    Intel BIOS Settings:
+        Before starting load default settings in the BIOS
+        Disable
+            Fast Boot
+            Secure Boot
+            VT-d
+            Serial/COM Port
+            Parallel Port
+            CSM
+            Thunderbolt
+            Intel SGX
+            Intel Platform Trust
+        Enable
+            VT-x
+            Above 4G decoding
+            Hyper-Threading
+            Execute Disable Bit
+            EHCI/XHCI Hand-off
+            OS type: Windows 8.1/10 UEFI Mode
+            DVMT Pre-Allocated(iGPU Memory): 64MB
+            SATA Mode: AHCI
 
+            In this guide, im not gonna show how to make a Hackintosh with AMD CPU's but you can find how to do it on the internet.
+
+After you finished changing these settings in the bios, reboot into Windows if you want to save some files or things on the hardrive because we are gonna reset the hardrive in the macOS Setup.
+
+Once you are done, reboot into BIOS And select the normal boot device as the usb and reboot.
+
+macOS Installation (Part Two)
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Once you rebooted. it needs to show you the Opencore Select Screen, select Install MacOS Monterey (or the version you downloaded).
+It should take you to the macOS Recovery screen.
+
+Select Disk Utility
+
+![image](https://github.com/user-attachments/assets/e1d332ce-3c24-4cd4-bdaa-e25b4c52989e)
+
+then select show all volumes.
+
+![image](https://github.com/user-attachments/assets/73dbc6ce-ee26-44c3-817f-c9ba7321f043)
+
+Select your hardrive, and erase it as APFS And GUID Partition Map. THIS WILL ERASE THE HARDRIVE AND YOUR DATA.
+
+![image](https://github.com/user-attachments/assets/ee9c9847-bf79-408a-9df3-66a7d64d1497)
+
+after erasing your hardrive, select Install macOS Monterey. Select basic things as agreeing the tos, and select your hardrive (or the disk you want to install macOS on)
 
 
 
